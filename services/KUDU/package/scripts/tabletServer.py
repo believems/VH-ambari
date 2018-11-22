@@ -23,4 +23,4 @@ class TabletServer(Script):
 
 
 if __name__ == "__main__":
-    Master().execute()
+    TabletServer().execute()
