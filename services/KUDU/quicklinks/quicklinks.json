@@ -1,0 +1,33 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+    "protocol": {
+      "type": "http"
+    },
+    "links": [
+      {
+        "name": "kudu_master_ui",
+        "label": "Kudu Master UI",
+        "component_name": "KUDU_MASTER",
+        "url": "%@://%@:%@",
+        "requires_user_name": "false",
+        "port": {
+          "http_default_port": "8051",
+          "https_default_port": "8051"
+        }
+      },
+      {
+        "name": "kudu_tablet_ui",
+        "label": "Kudu Tablet UI",
+        "component_name": "KUDU_TABLET_SERVER",
+        "url": "%@://%@:%@",
+        "requires_user_name": "false",
+        "port": {
+          "http_default_port": "8050",
+          "https_default_port": "8050"
+        }
+      }
+    ]
+  }
+}
