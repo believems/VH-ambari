@@ -1,0 +1,23 @@
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>MONGODB</name>
+            <displayName>Mongodb</displayName>
+            <comment>mongodb服务器.注意:mongodb服务器需要手动安装,ambari里只负责管理</comment>
+            <version>4.0.2</version>
+            <components>
+                <component>
+                    <name>MONGODB_SERVER</name>
+                    <displayName>mongodb server</displayName>
+                    <category>MASTER</category>
+                    <commandScript>
+                        <script>scripts/mongodb.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>600</timeout>
+                    </commandScript>
+                </component>
+            </components>
+        </service>
+    </services>
+</metainfo>
