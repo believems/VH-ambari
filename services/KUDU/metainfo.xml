@@ -11,6 +11,7 @@
                     <name>KUDU_MASTER</name>
                     <displayName>Kudu master</displayName>
                     <category>MASTER</category>
+                    <cardinality>1+</cardinality>
                     <commandScript>
                         <script>scripts/master.py</script>
                         <scriptType>PYTHON</scriptType>
@@ -21,6 +22,7 @@
                     <name>KUDU_TABLET_SERVER</name>
                     <displayName>Kudu tablet server</displayName>
                     <category>SLAVE</category>
+                    <cardinality>1+</cardinality>
                     <commandScript>
                         <script>scripts/tabletServer.py</script>
                         <scriptType>PYTHON</scriptType>
