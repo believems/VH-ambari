@@ -1,0 +1,30 @@
+{
+  "MONGODB": {
+    "MONGODB_SERVER": [
+      {
+        "name": "mongodb_server_process",
+        "label": "Mongodb进程",
+        "description": "mongodb不监听网络端口时触发此警告",
+        "interval": 5,
+        "scope": "ANY",
+        "source": {
+          "type": "PORT",
+          "default_port": 27017,
+          "reporting": {
+            "ok": {
+              "text": "TCP OK - {0:.3f}s response on port {1}"
+            },
+            "warning": {
+              "text": "TCP OK - {0:.3f}s response on port {1}",
+              "value": 1.5
+            },
+            "critical": {
+              "text": "Connection failed: {0} to {1}:{2}",
+              "value": 5.0
+            }
+          }
+        }
+      }
+    ]
+  }
+}
