@@ -11,6 +11,7 @@
                     <name>MONGODB_SERVER</name>
                     <displayName>mongodb server</displayName>
                     <category>MASTER</category>
+                    <cardinality>1+</cardinality>
                     <commandScript>
                         <script>scripts/mongodb.py</script>
                         <scriptType>PYTHON</scriptType>
