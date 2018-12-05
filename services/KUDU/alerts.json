@@ -1,0 +1,56 @@
+{
+    "KUDU": {
+        "KUDU_MASTER": [
+            {
+                "name": "kudu_master_process",
+                "label": "kudu master进程",
+                "description": "kudu master不监听rpc端口时触发此警告",
+                "interval": 5,
+                "scope": "ANY",
+                "source": {
+                    "type": "PORT",
+                    "default_port": 7051,
+                    "reporting": {
+                        "ok": {
+                            "text": "TCP OK - {0:.3f}s response on port {1}"
+                        },
+                        "warning": {
+                            "text": "TCP OK - {0:.3f}s response on port {1}",
+                            "value": 1.5
+                        },
+                        "critical": {
+                            "text": "Connection failed: {0} to {1}:{2}",
+                            "value": 5.0
+                        }
+                    }
+                }
+            }
+        ],
+        "KUDU_TABLET_SERVER": [
+            {
+                "name": "kudu_tablet_server_process",
+                "label": "kudu tablet server进程",
+                "description": "kudu master不监听rpc端口时触发此警告",
+                "interval": 5,
+                "scope": "ANY",
+                "source": {
+                    "type": "PORT",
+                    "default_port": 7050,
+                    "reporting": {
+                        "ok": {
+                            "text": "TCP OK - {0:.3f}s response on port {1}"
+                        },
+                        "warning": {
+                            "text": "TCP OK - {0:.3f}s response on port {1}",
+                            "value": 1.5
+                        },
+                        "critical": {
+                            "text": "Connection failed: {0} to {1}:{2}",
+                            "value": 5.0
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
